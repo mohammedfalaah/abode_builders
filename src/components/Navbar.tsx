@@ -26,7 +26,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 40) {
+      if (window.scrollY > 30) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -36,12 +36,10 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [pathname]);
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
     if (mobileMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -55,30 +53,30 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
           scrolled
-            ? "bg-[#171816]/90 backdrop-blur-md border-b border-[#D8C3A5]/10 py-3.5 shadow-2xl"
-            : "bg-transparent py-5 sm:py-7"
+            ? "bg-[#F8F6F1]/92 backdrop-blur-md border-b border-[#E8DDCC] py-3.5 shadow-sm text-[#252522]"
+            : "bg-[#F8F6F1]/80 backdrop-blur-sm border-b border-[#E8DDCC]/50 py-5 sm:py-6 text-[#252522]"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Brand Logo */}
+          {/* Brand Logo - Dark logotype on Warm Ivory */}
           <Link
             href="/"
             className="group flex items-center focus:outline-none"
             aria-label="Abode Builders Home"
           >
-            <div className="relative h-11 sm:h-12 w-36 sm:w-44">
+            <div className="relative h-10 sm:h-12 w-36 sm:w-44">
               <Image
-                src="/logo-white.png"
+                src="/logo-dark.png"
                 alt="ABODE BUILDERS"
                 fill
                 priority
-                className="object-contain object-left group-hover:opacity-90 transition-opacity"
+                className="object-contain object-left group-hover:opacity-85 transition-opacity"
               />
             </div>
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center space-x-1 lg:space-x-2 bg-[#222320]/60 backdrop-blur-md px-4 py-1.5 rounded-full border border-[#D8C3A5]/15">
+          <nav className="hidden md:flex items-center space-x-1 lg:space-x-2 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full border border-[#E8DDCC] shadow-sm">
             {NAV_LINKS.map((link) => {
               const isProjects = link.name === "Projects";
               const isActive = isProjects ? pathname.startsWith("/projects") : pathname === link.href;
@@ -89,8 +87,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`px-3.5 py-1.5 text-xs lg:text-sm tracking-wider uppercase transition-colors rounded-full ${
                     isActive
-                      ? "text-[#171816] bg-[#D8C3A5] font-semibold"
-                      : "text-[#F5F1E9]/80 hover:text-[#F5F1E9] hover:bg-white/5"
+                      ? "text-[#F8F6F1] bg-[#252522] font-semibold shadow-sm"
+                      : "text-[#252522]/75 hover:text-[#252522] hover:bg-[#E8DDCC]/30"
                   }`}
                 >
                   {link.name}
@@ -103,7 +101,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <button
               onClick={() => openQuote()}
-              className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-[#D8C3A5] hover:bg-[#F5F1E9] text-[#171816] text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
+              className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-[#252522] hover:bg-[#8A7158] text-[#F8F6F1] text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105 active:scale-95"
             >
               <span>Get a Quote</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -114,13 +112,13 @@ export default function Navbar() {
           <div className="flex md:hidden items-center gap-2">
             <button
               onClick={() => openQuote()}
-              className="px-3 py-1.5 rounded-full bg-[#D8C3A5] text-[#171816] text-[11px] font-semibold tracking-wider uppercase"
+              className="px-3 py-1.5 rounded-full bg-[#252522] text-[#F8F6F1] text-[11px] font-semibold tracking-wider uppercase"
             >
               Quote
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg bg-[#222320]/80 border border-[#D8C3A5]/20 text-[#F5F1E9] focus:outline-none"
+              className="p-2 rounded-lg bg-white border border-[#E8DDCC] text-[#252522] focus:outline-none shadow-sm"
               aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -136,7 +134,7 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 md:hidden bg-[#171816]/95 backdrop-blur-xl flex flex-col justify-between p-6 pt-24"
+            className="fixed inset-0 z-50 md:hidden bg-[#F8F6F1]/98 backdrop-blur-xl flex flex-col justify-between p-6 pt-24 text-[#252522]"
           >
             {/* Top close bar */}
             <div className="absolute top-6 left-6 right-6 flex items-center justify-between">
@@ -147,7 +145,7 @@ export default function Navbar() {
                 aria-label="Abode Builders Home"
               >
                 <Image
-                  src="/logo-white.png"
+                  src="/logo-dark.png"
                   alt="ABODE BUILDERS"
                   fill
                   className="object-contain object-left"
@@ -155,7 +153,7 @@ export default function Navbar() {
               </Link>
               <button
                 onClick={() => setMobileMenuOpen(false)}
-                className="p-2 rounded-full text-[#D8C3A5] hover:bg-[#222320]"
+                className="p-2 rounded-full text-[#252522] hover:bg-[#E8DDCC]/40"
                 aria-label="Close menu"
               >
                 <X className="w-6 h-6" />
@@ -164,7 +162,7 @@ export default function Navbar() {
 
             {/* Menu Links */}
             <nav className="flex flex-col space-y-4 my-auto">
-              <span className="text-[10px] uppercase tracking-[0.3em] text-[#D8C3A5]/60 mb-2">
+              <span className="text-[10px] uppercase tracking-[0.3em] text-[#8A7158] font-bold mb-2">
                 Navigation
               </span>
               {NAV_LINKS.map((link, idx) => (
@@ -177,10 +175,10 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="font-serif text-3xl text-[#F5F1E9] hover:text-[#D8C3A5] transition-colors flex items-center justify-between py-1"
+                    className="font-serif text-3xl text-[#252522] hover:text-[#8A7158] transition-colors flex items-center justify-between py-1"
                   >
                     <span>{link.name}</span>
-                    <span className="text-xs font-sans tracking-widest text-[#D8C3A5]/40">
+                    <span className="text-xs font-sans tracking-widest text-[#B5A18A]">
                       0{idx + 1}
                     </span>
                   </Link>
@@ -189,13 +187,13 @@ export default function Navbar() {
             </nav>
 
             {/* Bottom Actions & Contact */}
-            <div className="space-y-4 pt-6 border-t border-[#D8C3A5]/15">
+            <div className="space-y-4 pt-6 border-t border-[#E8DDCC]">
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
                   openQuote();
                 }}
-                className="w-full flex items-center justify-center gap-2 py-3.5 rounded-full bg-[#D8C3A5] text-[#171816] font-semibold text-sm tracking-wider uppercase shadow-lg"
+                className="w-full flex items-center justify-center gap-2 py-3.5 rounded-full bg-[#252522] text-[#F8F6F1] font-semibold text-sm tracking-wider uppercase shadow-md hover:bg-[#8A7158]"
               >
                 <span>Get a Quote ↗</span>
               </button>
@@ -203,18 +201,18 @@ export default function Navbar() {
               <div className="grid grid-cols-2 gap-3 text-xs">
                 <a
                   href={`tel:${COMPANY_INFO.phone}`}
-                  className="flex items-center justify-center gap-2 py-2.5 rounded-lg bg-[#222320] border border-[#D8C3A5]/20 text-[#F5F1E9]"
+                  className="flex items-center justify-center gap-2 py-2.5 rounded-lg bg-white border border-[#E8DDCC] text-[#252522] shadow-sm"
                 >
-                  <Phone className="w-3.5 h-3.5 text-[#D8C3A5]" />
+                  <Phone className="w-3.5 h-3.5 text-[#8A7158]" />
                   <span>Call Us</span>
                 </a>
                 <a
                   href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=${encodeURIComponent(COMPANY_INFO.whatsappMessage)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 py-2.5 rounded-lg bg-[#222320] border border-[#D8C3A5]/20 text-[#F5F1E9]"
+                  className="flex items-center justify-center gap-2 py-2.5 rounded-lg bg-white border border-[#E8DDCC] text-[#252522] shadow-sm"
                 >
-                  <MessageSquare className="w-3.5 h-3.5 text-[#25D366]" />
+                  <MessageSquare className="w-3.5 h-3.5 text-[#777B63]" />
                   <span>WhatsApp</span>
                 </a>
               </div>

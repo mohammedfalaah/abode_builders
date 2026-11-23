@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#171816",
+  themeColor: "#F8F6F1",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -65,7 +65,7 @@ export default function RootLayout({
     name: "Abode Builders",
     alternateName: "Abode Architectural Spaces",
     url: "https://abodebuilders.com",
-    logo: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop",
+    logo: "https://abodebuilders.com/logo-dark.png",
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop",
     description: COMPANY_INFO.description,
     telephone: COMPANY_INFO.phone,
@@ -101,7 +101,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="light">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -118,7 +118,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-[#171816] text-[#F5F1E9] antialiased selection:bg-[#D8C3A5] selection:text-[#171816] flex flex-col font-sans">
+      <body className="min-h-screen bg-[#F8F6F1] text-[#252522] antialiased selection:bg-[#E8DDCC] selection:text-[#252522] flex flex-col font-sans">
         {children}
       </body>
     </html>

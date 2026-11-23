@@ -13,13 +13,13 @@ export default function Hero() {
   const { openStory, openQuote } = useModal();
 
   return (
-    <section className="relative min-h-screen w-full flex flex-col justify-between overflow-hidden bg-[#171816]">
+    <section className="relative min-h-screen w-full flex flex-col justify-between overflow-hidden bg-[#F8F6F1] text-[#252522]">
       {/* Background Architectural Image with Subtle Scale */}
       <div className="absolute inset-0 z-0">
         <motion.div
-          initial={{ scale: 1.08 }}
+          initial={{ scale: 1.06 }}
           animate={{ scale: 1 }}
-          transition={{ duration: 2.4, ease: "easeOut" }}
+          transition={{ duration: 2.2, ease: "easeOut" }}
           className="relative w-full h-full"
         >
           <Image
@@ -27,43 +27,41 @@ export default function Hero() {
             alt="Abode Builders - Modern Tropical Luxury Residence"
             fill
             priority
-            quality={90}
             className="object-cover object-center"
           />
         </motion.div>
 
-        {/* Sophisticated Architectural Gradient Overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#171816] via-[#171816]/65 to-[#171816]/70" />
-        <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#171816]/30 to-[#171816]/90" />
-        <div className="absolute inset-0 bg-[#171816]/25" />
+        {/* Sophisticated Warm Ivory Architectural Gradient Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#F8F6F1] via-[#F8F6F1]/55 to-[#F8F6F1]/35" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#F8F6F1]/92 via-[#F8F6F1]/60 to-transparent" />
       </div>
 
       {/* Hero Core Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-32 sm:pt-40 md:pt-48 pb-16 flex-1 flex flex-col justify-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-36 sm:pt-44 md:pt-52 pb-16 flex-1 flex flex-col justify-center">
         <div className="max-w-3xl">
-          {/* Eyebrow */}
+          {/* Eyebrow in Earth Brown */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#222320]/75 border border-[#D8C3A5]/30 backdrop-blur-md mb-6"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-[#E8DDCC] backdrop-blur-md mb-6 shadow-sm"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#D8C3A5]" />
-            <span className="text-[11px] sm:text-xs uppercase tracking-[0.28em] text-[#D8C3A5] font-semibold">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#8A7158]" />
+            <span className="text-[11px] sm:text-xs uppercase tracking-[0.28em] text-[#8A7158] font-bold">
               {COMPANY_INFO.tagline}
             </span>
           </motion.div>
 
-          {/* Main Headline */}
+          {/* Main Headline in Charcoal and Earth Brown */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="font-serif text-5xl sm:text-7xl lg:text-8xl tracking-tight text-[#F5F1E9] leading-[1.05]"
+            className="font-serif text-5xl sm:text-7xl lg:text-8xl tracking-tight text-[#252522] leading-[1.05]"
           >
             Modern Homes.{" "}
             <br />
-            <span className="italic font-normal text-[#D8C3A5]">
+            <span className="italic font-normal text-[#8A7158]">
               Earthy Feels.
             </span>
           </motion.h1>
@@ -73,7 +71,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.55 }}
-            className="mt-6 sm:mt-8 text-base sm:text-xl text-[#F5F1E9]/80 font-light max-w-2xl leading-relaxed"
+            className="mt-6 sm:mt-8 text-base sm:text-xl text-[#252522]/80 font-normal max-w-2xl leading-relaxed"
           >
             Thoughtfully designed, expertly built homes that blend modern living with the warmth of nature.
           </motion.p>
@@ -87,7 +85,7 @@ export default function Hero() {
           >
             <Link
               href="/projects"
-              className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#D8C3A5] hover:bg-[#F5F1E9] text-[#171816] font-semibold text-sm uppercase tracking-wider transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 active:scale-95"
+              className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-[#252522] hover:bg-[#8A7158] text-[#F8F6F1] font-semibold text-sm uppercase tracking-wider transition-all duration-300 shadow-md hover:shadow-xl hover:scale-105 active:scale-95"
             >
               <span>Explore Projects</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -97,9 +95,9 @@ export default function Hero() {
               href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=${encodeURIComponent(COMPANY_INFO.whatsappMessage)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-[#222320]/80 hover:bg-[#222320] border border-[#D8C3A5]/30 hover:border-[#D8C3A5] text-[#F5F1E9] text-sm font-medium tracking-wide transition-all backdrop-blur-md"
+              className="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full bg-white/95 hover:bg-white border border-[#E8DDCC] hover:border-[#8A7158] text-[#252522] text-sm font-semibold tracking-wide transition-all shadow-sm backdrop-blur-md"
             >
-              <MessageSquare className="w-4 h-4 text-[#25D366]" />
+              <MessageSquare className="w-4 h-4 text-[#777B63]" />
               <span>WhatsApp / Talk to Us</span>
             </a>
           </motion.div>

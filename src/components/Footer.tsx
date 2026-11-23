@@ -58,10 +58,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#171816] text-[#F5F1E9] border-t border-[#D8C3A5]/15 pt-20 pb-12">
+    <footer className="bg-[#252522] text-[#F8F6F1] border-t border-[#B5A18A]/20 pt-20 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Footer Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 pb-16 border-b border-[#D8C3A5]/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 pb-16 border-b border-[#B5A18A]/20">
           {/* Brand info (5 cols) */}
           <div className="lg:col-span-5 space-y-5">
             <Link href="/" className="inline-block focus:outline-none" aria-label="Abode Builders Home">
@@ -75,11 +75,11 @@ export default function Footer() {
               </div>
             </Link>
 
-            <p className="font-serif italic text-xl text-[#D8C3A5] font-light">
+            <p className="font-serif italic text-xl text-[#E8DDCC] font-light">
               {COMPANY_INFO.statement}
             </p>
 
-            <p className="text-xs sm:text-sm text-[#F5F1E9]/70 max-w-sm leading-relaxed font-light">
+            <p className="text-xs sm:text-sm text-[#F8F6F1]/75 max-w-sm leading-relaxed font-light">
               Crafting tactile, modern residences that harmonize contemporary architectural precision with the organic serenity of earth, timber, and tropical nature.
             </p>
 
@@ -89,7 +89,7 @@ export default function Footer() {
                 href={COMPANY_INFO.socials.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#222320] border border-[#D8C3A5]/20 hover:border-[#D8C3A5] text-[#D8C3A5] flex items-center justify-center transition-colors"
+                className="w-10 h-10 rounded-full bg-[#252522] border border-[#B5A18A]/30 hover:border-[#E8DDCC] hover:bg-[#8A7158] text-[#E8DDCC] hover:text-white flex items-center justify-center transition-colors"
                 aria-label="Abode Builders on Instagram"
               >
                 <InstagramIcon />
@@ -98,7 +98,7 @@ export default function Footer() {
                 href={COMPANY_INFO.socials.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#222320] border border-[#D8C3A5]/20 hover:border-[#D8C3A5] text-[#D8C3A5] flex items-center justify-center transition-colors"
+                className="w-10 h-10 rounded-full bg-[#252522] border border-[#B5A18A]/30 hover:border-[#E8DDCC] hover:bg-[#8A7158] text-[#E8DDCC] hover:text-white flex items-center justify-center transition-colors"
                 aria-label="Abode Builders on Facebook"
               >
                 <FacebookIcon />
@@ -107,7 +107,7 @@ export default function Footer() {
                 href={COMPANY_INFO.socials.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#222320] border border-[#D8C3A5]/20 hover:border-[#D8C3A5] text-[#D8C3A5] flex items-center justify-center transition-colors"
+                className="w-10 h-10 rounded-full bg-[#252522] border border-[#B5A18A]/30 hover:border-[#E8DDCC] hover:bg-[#8A7158] text-[#E8DDCC] hover:text-white flex items-center justify-center transition-colors"
                 aria-label="Abode Builders on LinkedIn"
               >
                 <LinkedInIcon />
@@ -116,7 +116,7 @@ export default function Footer() {
                 href={COMPANY_INFO.socials.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-[#222320] border border-[#D8C3A5]/20 hover:border-[#D8C3A5] text-[#D8C3A5] flex items-center justify-center transition-colors"
+                className="w-10 h-10 rounded-full bg-[#252522] border border-[#B5A18A]/30 hover:border-[#E8DDCC] hover:bg-[#8A7158] text-[#E8DDCC] hover:text-white flex items-center justify-center transition-colors"
                 aria-label="Abode Builders on YouTube"
               >
                 <YoutubeIcon />
@@ -126,7 +126,7 @@ export default function Footer() {
 
           {/* Quick Navigation (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
-            <span className="text-xs uppercase tracking-[0.25em] text-[#D8C3A5] font-semibold block">
+            <span className="text-xs uppercase tracking-[0.25em] text-[#E8DDCC] font-semibold block">
               Navigation
             </span>
             <ul className="space-y-2.5">
@@ -134,7 +134,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm text-[#F5F1E9]/75 hover:text-[#D8C3A5] transition-colors"
+                    className="text-sm text-[#F8F6F1]/75 hover:text-[#E8DDCC] transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -145,35 +145,35 @@ export default function Footer() {
 
           {/* Contact Details (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
-            <span className="text-xs uppercase tracking-[0.25em] text-[#D8C3A5] font-semibold block">
+            <span className="text-xs uppercase tracking-[0.25em] text-[#E8DDCC] font-semibold block">
               Contact & Studio
             </span>
-            <div className="space-y-3 text-xs sm:text-sm text-[#F5F1E9]/80">
+            <div className="space-y-3 text-xs sm:text-sm text-[#F8F6F1]/80">
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 text-[#D8C3A5] shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#E8DDCC] shrink-0 mt-0.5" />
                 <span>
                   {COMPANY_INFO.office.address}, {COMPANY_INFO.office.city}, {COMPANY_INFO.office.state} - {COMPANY_INFO.office.pincode}
                 </span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#D8C3A5] shrink-0" />
-                <a href={`tel:${COMPANY_INFO.phone}`} className="hover:text-[#D8C3A5]">
+                <Phone className="w-4 h-4 text-[#E8DDCC] shrink-0" />
+                <a href={`tel:${COMPANY_INFO.phone}`} className="hover:text-[#E8DDCC]">
                   {COMPANY_INFO.phone}
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#D8C3A5] shrink-0" />
-                <a href={`mailto:${COMPANY_INFO.email}`} className="hover:text-[#D8C3A5]">
+                <Mail className="w-4 h-4 text-[#E8DDCC] shrink-0" />
+                <a href={`mailto:${COMPANY_INFO.email}`} className="hover:text-[#E8DDCC]">
                   {COMPANY_INFO.email}
                 </a>
               </div>
             </div>
 
             <div className="pt-3">
-              <span className="text-[11px] text-[#D8C3A5] uppercase tracking-wider block mb-1">
+              <span className="text-[11px] text-[#E8DDCC] uppercase tracking-wider block mb-1">
                 Regional Studios:
               </span>
-              <p className="text-xs text-[#F5F1E9]/60">
+              <p className="text-xs text-[#F8F6F1]/70">
                 Kochi • Bangalore • Kozhikode • Wayanad
               </p>
             </div>
@@ -181,13 +181,13 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar: Copyright & Scroll to Top */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#F5F1E9]/60">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#F8F6F1]/60">
           <p>{COMPANY_INFO.meta.copyright}</p>
           <div className="flex items-center gap-6">
-            <span className="text-[#D8C3A5]/60">Modern Homes • Earthy Feels</span>
+            <span className="text-[#E8DDCC]/70">Modern Homes • Earthy Feels</span>
             <button
               onClick={scrollToTop}
-              className="inline-flex items-center gap-1.5 text-[#D8C3A5] hover:text-[#F5F1E9] transition-colors"
+              className="inline-flex items-center gap-1.5 text-[#E8DDCC] hover:text-white transition-colors"
             >
               <span>Back to Top</span>
               <ArrowUp className="w-3.5 h-3.5" />

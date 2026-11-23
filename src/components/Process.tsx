@@ -10,23 +10,23 @@ export default function Process() {
   const currentStep = PROCESS_STEPS[activeStepIndex];
 
   return (
-    <section id="process" className="py-24 sm:py-32 bg-[#222320] text-[#F5F1E9] relative border-y border-[#D8C3A5]/15 overflow-hidden">
+    <section id="process" className="py-24 sm:py-32 bg-[#E8DDCC]/35 text-[#252522] relative border-b border-[#E8DDCC] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-16 sm:mb-20">
           <div className="flex items-center gap-2 mb-3">
-            <span className="w-8 h-[1px] bg-[#D8C3A5]" />
-            <span className="text-xs uppercase tracking-[0.28em] text-[#D8C3A5] font-bold">
+            <span className="w-8 h-[1px] bg-[#8A7158]" />
+            <span className="text-xs uppercase tracking-[0.28em] text-[#8A7158] font-bold">
               OUR PROCESS
             </span>
           </div>
 
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F5F1E9] tracking-tight leading-tight">
+          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#252522] tracking-tight leading-tight">
             A Methodical Journey <br />
-            <span className="italic font-normal text-[#D8C3A5]">to Perfection.</span>
+            <span className="italic font-normal text-[#8A7158]">to Perfection.</span>
           </h2>
 
-          <p className="mt-4 text-base sm:text-lg text-[#F5F1E9]/75 font-light leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-[#252522]/75 font-normal leading-relaxed">
             From preliminary sketches to zero-snag ceremonial handover, every milestone is orchestrated with absolute clarity and craftsmanship.
           </p>
         </div>
@@ -35,11 +35,11 @@ export default function Process() {
         <div className="hidden lg:block mb-12">
           <div className="relative flex items-center justify-between">
             {/* Horizontal line */}
-            <div className="absolute top-1/2 left-0 right-0 h-[2px] bg-[#D8C3A5]/20 -translate-y-1/2 z-0" />
+            <div className="absolute top-1/2 left-0 right-0 h-[2px] bg-[#B5A18A]/30 -translate-y-1/2 z-0" />
             
             {/* Animated progress bar fill */}
             <div
-              className="absolute top-1/2 left-0 h-[2px] bg-[#D8C3A5] -translate-y-1/2 z-0 transition-all duration-500"
+              className="absolute top-1/2 left-0 h-[2px] bg-[#8A7158] -translate-y-1/2 z-0 transition-all duration-500"
               style={{
                 width: `${(activeStepIndex / (PROCESS_STEPS.length - 1)) * 100}%`,
               }}
@@ -58,18 +58,18 @@ export default function Process() {
                   <div
                     className={`w-14 h-14 rounded-full flex items-center justify-center font-mono text-sm transition-all duration-300 ${
                       isActive
-                        ? "bg-[#D8C3A5] text-[#171816] font-bold scale-110 shadow-2xl ring-4 ring-[#D8C3A5]/30"
+                        ? "bg-[#252522] text-[#F8F6F1] font-bold scale-110 shadow-lg ring-4 ring-[#8A7158]/30"
                         : isPast
-                        ? "bg-[#9C8061] text-[#F5F1E9]"
-                        : "bg-[#171816] text-[#F5F1E9]/60 border border-[#D8C3A5]/20 group-hover:border-[#D8C3A5]"
+                        ? "bg-[#8A7158] text-[#F8F6F1]"
+                        : "bg-white text-[#252522]/60 border border-[#E8DDCC] group-hover:border-[#8A7158]"
                     }`}
                   >
                     {step.step}
                   </div>
 
                   <span
-                    className={`mt-3 text-xs uppercase tracking-widest font-semibold transition-colors ${
-                      isActive ? "text-[#D8C3A5]" : "text-[#F5F1E9]/60 group-hover:text-[#F5F1E9]"
+                    className={`mt-3 text-xs uppercase tracking-widest font-bold transition-colors ${
+                      isActive ? "text-[#8A7158]" : "text-[#252522]/60 group-hover:text-[#252522]"
                     }`}
                   >
                     {step.title}
@@ -86,10 +86,10 @@ export default function Process() {
             <button
               key={step.step}
               onClick={() => setActiveStepIndex(idx)}
-              className={`px-4 py-2 rounded-full text-xs uppercase tracking-wider font-semibold whitespace-nowrap transition-all ${
+              className={`px-4 py-2 rounded-full text-xs uppercase tracking-wider font-bold whitespace-nowrap transition-all shadow-sm ${
                 activeStepIndex === idx
-                  ? "bg-[#D8C3A5] text-[#171816]"
-                  : "bg-[#171816] text-[#F5F1E9]/70 border border-[#D8C3A5]/20"
+                  ? "bg-[#252522] text-[#F8F6F1]"
+                  : "bg-white text-[#252522]/70 border border-[#E8DDCC]"
               }`}
             >
               {step.step} • {step.title}
@@ -97,7 +97,7 @@ export default function Process() {
           ))}
         </div>
 
-        {/* Active Stage Detailed Card */}
+        {/* Active Stage Detailed Card in Soft White */}
         <AnimatePresence mode="wait">
           <motion.div
             key={currentStep.step}
@@ -105,36 +105,36 @@ export default function Process() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
-            className="p-8 sm:p-12 rounded-3xl bg-[#171816] border border-[#D8C3A5]/25 shadow-2xl"
+            className="p-8 sm:p-12 rounded-3xl bg-white border border-[#E8DDCC] shadow-xl text-[#252522]"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               <div className="lg:col-span-7 space-y-5">
                 <div className="flex items-center gap-3">
-                  <span className="font-mono text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-[#222320] text-[#D8C3A5] border border-[#D8C3A5]/20">
+                  <span className="font-mono text-xs uppercase tracking-widest px-3 py-1 rounded-full bg-[#F8F6F1] text-[#8A7158] border border-[#E8DDCC] font-bold">
                     Stage {currentStep.step} of 04
                   </span>
-                  <span className="text-xs text-[#D8C3A5] flex items-center gap-1.5">
+                  <span className="text-xs text-[#8A7158] flex items-center gap-1.5 font-semibold">
                     <Clock className="w-3.5 h-3.5" />
                     {currentStep.timeline}
                   </span>
                 </div>
 
-                <h3 className="font-serif text-3xl sm:text-4xl text-[#F5F1E9]">
+                <h3 className="font-serif text-3xl sm:text-4xl text-[#252522]">
                   {currentStep.title} — {currentStep.subtitle}
                 </h3>
 
-                <p className="text-sm sm:text-base text-[#F5F1E9]/80 leading-relaxed font-light">
+                <p className="text-sm sm:text-base text-[#252522]/80 leading-relaxed font-normal">
                   {currentStep.description}
                 </p>
 
-                <div className="pt-4 border-t border-[#D8C3A5]/10">
-                  <span className="text-xs uppercase tracking-widest text-[#D8C3A5] font-semibold block mb-3">
+                <div className="pt-4 border-t border-[#E8DDCC]">
+                  <span className="text-xs uppercase tracking-widest text-[#8A7158] font-bold block mb-3">
                     Stage Inclusions & Safeguards:
                   </span>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                     {currentStep.keyPoints.map((pt) => (
-                      <div key={pt} className="flex items-start gap-2 text-xs text-[#F5F1E9]/85">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#D8C3A5] shrink-0 mt-0.5" />
+                      <div key={pt} className="flex items-start gap-2 text-xs text-[#252522]/85">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#777B63] shrink-0 mt-0.5" />
                         <span>{pt}</span>
                       </div>
                     ))}
@@ -142,24 +142,24 @@ export default function Process() {
                 </div>
               </div>
 
-              {/* Right Summary Badge */}
-              <div className="lg:col-span-5 bg-[#222320] p-6 sm:p-8 rounded-2xl border border-[#D8C3A5]/20 flex flex-col justify-between space-y-6">
+              {/* Right Summary Badge in Warm Ivory */}
+              <div className="lg:col-span-5 bg-[#F8F6F1] p-6 sm:p-8 rounded-2xl border border-[#E8DDCC] flex flex-col justify-between space-y-6">
                 <div>
-                  <Sparkles className="w-7 h-7 text-[#D8C3A5] mb-3" />
-                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#D8C3A5] font-semibold block">
+                  <Sparkles className="w-7 h-7 text-[#8A7158] mb-3" />
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-[#8A7158] font-bold block">
                     Phase Outcome
                   </span>
-                  <h4 className="font-serif text-xl sm:text-2xl text-[#F5F1E9] mt-1">
+                  <h4 className="font-serif text-xl sm:text-2xl text-[#252522] mt-1">
                     {currentStep.highlight}
                   </h4>
                 </div>
 
-                <div className="flex items-center justify-between pt-4 border-t border-[#D8C3A5]/10">
+                <div className="flex items-center justify-between pt-4 border-t border-[#E8DDCC]">
                   <button
                     onClick={() =>
                       setActiveStepIndex((prev) => (prev > 0 ? prev - 1 : PROCESS_STEPS.length - 1))
                     }
-                    className="text-xs text-[#F5F1E9]/70 hover:text-[#D8C3A5]"
+                    className="text-xs text-[#252522]/70 hover:text-[#8A7158] font-medium"
                   >
                     ← Previous Phase
                   </button>
@@ -167,7 +167,7 @@ export default function Process() {
                     onClick={() =>
                       setActiveStepIndex((prev) => (prev < PROCESS_STEPS.length - 1 ? prev + 1 : 0))
                     }
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#D8C3A5] hover:text-[#F5F1E9]"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#8A7158] hover:text-[#252522]"
                   >
                     <span>Next Phase</span>
                     <ArrowRight className="w-3 h-3" />

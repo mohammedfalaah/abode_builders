@@ -16,13 +16,13 @@ export default function WhatsAppSticky() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with Abode Builders on WhatsApp"
-        className="flex items-center gap-3 pl-3.5 pr-4 py-3 rounded-full bg-[#222320]/90 hover:bg-[#171816] border border-[#25D366]/40 text-white shadow-2xl backdrop-blur-md transition-all duration-300 hover:scale-105 hover:border-[#25D366] group"
+        className="flex items-center gap-3 pl-3.5 pr-4 py-3 rounded-full bg-[#252522]/95 hover:bg-[#8A7158] border border-[#25D366]/40 text-white shadow-2xl backdrop-blur-md transition-all duration-300 hover:scale-105 hover:border-[#25D366] group"
       >
         <div className="w-8 h-8 rounded-full bg-[#25D366] flex items-center justify-center shadow-md">
           <MessageSquare className="w-4 h-4 fill-white text-white" />
         </div>
         <div className="hidden sm:flex flex-col text-left">
-          <span className="text-[10px] uppercase tracking-wider text-[#D8C3A5] font-medium leading-tight">
+          <span className="text-[10px] uppercase tracking-wider text-[#E8DDCC] font-medium leading-tight">
             Consult Architect
           </span>
           <span className="text-xs font-semibold text-white leading-tight">

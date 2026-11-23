@@ -76,7 +76,7 @@ export default function Contact() {
           particleCount: 70,
           spread: 60,
           origin: { y: 0.7 },
-          colors: ["#D8C3A5", "#9C8061", "#F5F1E9"],
+          colors: ["#E8DDCC", "#8A7158", "#B5A18A"],
         });
       } catch {
         // Fallback
@@ -98,53 +98,53 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 sm:py-32 bg-[#171816] text-[#F5F1E9] relative border-t border-[#D8C3A5]/10">
+    <section id="contact" className="py-24 sm:py-32 bg-[#E8DDCC]/30 text-[#252522] relative border-b border-[#E8DDCC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-16 sm:mb-20">
           <div className="flex items-center gap-2 mb-3">
-            <span className="w-8 h-[1px] bg-[#D8C3A5]" />
-            <span className="text-xs uppercase tracking-[0.28em] text-[#D8C3A5] font-bold">
+            <span className="w-8 h-[1px] bg-[#8A7158]" />
+            <span className="text-xs uppercase tracking-[0.28em] text-[#8A7158] font-bold">
               GET IN TOUCH
             </span>
           </div>
 
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F5F1E9] tracking-tight leading-tight">
+          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#252522] tracking-tight leading-tight">
             Begin Your Architectural <br />
-            <span className="italic font-normal text-[#D8C3A5]">Chapter.</span>
+            <span className="italic font-normal text-[#8A7158]">Chapter.</span>
           </h2>
 
-          <p className="mt-4 text-base sm:text-lg text-[#F5F1E9]/75 font-light leading-relaxed">
+          <p className="mt-4 text-base sm:text-lg text-[#252522]/75 font-normal leading-relaxed">
             Reach out directly to our principal architects for consultation, site feasibility, or custom design-build inquiries.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Form (7 cols) */}
-          <div className="lg:col-span-7 bg-[#222320] border border-[#D8C3A5]/20 rounded-3xl p-7 sm:p-10 shadow-2xl">
+          {/* Left Column: Form in Soft White (7 cols) */}
+          <div className="lg:col-span-7 bg-white border border-[#E8DDCC] rounded-3xl p-7 sm:p-10 shadow-xl">
             {submitted ? (
               <div className="py-12 text-center space-y-5">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#777C62]/20 border border-[#777C62]/40 text-[#D8C3A5]">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#777B63]/15 border border-[#777B63]/30 text-[#777B63]">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
-                <h3 className="font-serif text-3xl sm:text-4xl text-[#F5F1E9]">
+                <h3 className="font-serif text-3xl sm:text-4xl text-[#252522]">
                   Consultation Request Sent
                 </h3>
-                <p className="text-sm sm:text-base text-[#F5F1E9]/80 max-w-md mx-auto leading-relaxed">
-                  Thank you, <span className="text-[#D8C3A5] font-medium">{formData.fullName}</span>. One of our senior architects will reach out shortly to review your requirements.
+                <p className="text-sm sm:text-base text-[#252522]/80 max-w-md mx-auto leading-relaxed font-normal">
+                  Thank you, <span className="text-[#8A7158] font-bold">{formData.fullName}</span>. One of our senior architects will reach out shortly to review your requirements.
                 </p>
                 <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
                   <a
                     href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Hi%20Abode%20Builders%2C%20I%20just%20submitted%20a%20project%20inquiry%20for%20${encodeURIComponent(formData.projectLocation)}.`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#25D366] text-white font-medium text-sm hover:brightness-110 transition-all"
+                    className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#777B63] text-white font-medium text-sm hover:brightness-110 transition-all shadow-sm"
                   >
                     Quick WhatsApp Connect →
                   </a>
                   <button
                     onClick={handleReset}
-                    className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-full border border-[#D8C3A5]/30 text-[#F5F1E9] text-sm hover:bg-[#171816]"
+                    className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-full border border-[#E8DDCC] text-[#252522] text-sm hover:bg-[#F8F6F1]"
                   >
                     Send Another Message
                   </button>
@@ -155,7 +155,7 @@ export default function Contact() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {/* Full Name */}
                   <div>
-                    <label className="block text-xs uppercase tracking-wider text-[#D8C3A5]/90 mb-1.5 font-medium">
+                    <label className="block text-xs uppercase tracking-wider text-[#8A7158] mb-1.5 font-bold">
                       Full Name *
                     </label>
                     <input
@@ -163,16 +163,16 @@ export default function Contact() {
                       placeholder="e.g. Anand Varma"
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                      className={`w-full bg-[#171816] border ${
-                        errors.fullName ? "border-red-500" : "border-[#D8C3A5]/25 focus:border-[#D8C3A5]"
-                      } rounded-xl px-4 py-3 text-sm text-[#F5F1E9] placeholder-[#F5F1E9]/30 outline-none transition-colors`}
+                      className={`w-full bg-[#F8F6F1] border ${
+                        errors.fullName ? "border-red-500" : "border-[#E8DDCC] focus:border-[#8A7158]"
+                      } rounded-xl px-4 py-3 text-sm text-[#252522] placeholder-[#252522]/35 outline-none transition-colors`}
                     />
-                    {errors.fullName && <p className="text-red-400 text-xs mt-1">{errors.fullName}</p>}
+                    {errors.fullName && <p className="text-red-500 text-xs mt-1">{errors.fullName}</p>}
                   </div>
 
                   {/* Phone Number */}
                   <div>
-                    <label className="block text-xs uppercase tracking-wider text-[#D8C3A5]/90 mb-1.5 font-medium">
+                    <label className="block text-xs uppercase tracking-wider text-[#8A7158] mb-1.5 font-bold">
                       Phone Number *
                     </label>
                     <input
@@ -180,18 +180,18 @@ export default function Contact() {
                       placeholder="+91 98470 12345"
                       value={formData.phoneNumber}
                       onChange={(e) => setFormData({ ...formData, phoneNumber: e.target.value })}
-                      className={`w-full bg-[#171816] border ${
-                        errors.phoneNumber ? "border-red-500" : "border-[#D8C3A5]/25 focus:border-[#D8C3A5]"
-                      } rounded-xl px-4 py-3 text-sm text-[#F5F1E9] placeholder-[#F5F1E9]/30 outline-none transition-colors`}
+                      className={`w-full bg-[#F8F6F1] border ${
+                        errors.phoneNumber ? "border-red-500" : "border-[#E8DDCC] focus:border-[#8A7158]"
+                      } rounded-xl px-4 py-3 text-sm text-[#252522] placeholder-[#252522]/35 outline-none transition-colors`}
                     />
-                    {errors.phoneNumber && <p className="text-red-400 text-xs mt-1">{errors.phoneNumber}</p>}
+                    {errors.phoneNumber && <p className="text-red-500 text-xs mt-1">{errors.phoneNumber}</p>}
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {/* Email */}
                   <div>
-                    <label className="block text-xs uppercase tracking-wider text-[#D8C3A5]/90 mb-1.5 font-medium">
+                    <label className="block text-xs uppercase tracking-wider text-[#8A7158] mb-1.5 font-bold">
                       Email Address *
                     </label>
                     <input
@@ -199,16 +199,16 @@ export default function Contact() {
                       placeholder="anand@example.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className={`w-full bg-[#171816] border ${
-                        errors.email ? "border-red-500" : "border-[#D8C3A5]/25 focus:border-[#D8C3A5]"
-                      } rounded-xl px-4 py-3 text-sm text-[#F5F1E9] placeholder-[#F5F1E9]/30 outline-none transition-colors`}
+                      className={`w-full bg-[#F8F6F1] border ${
+                        errors.email ? "border-red-500" : "border-[#E8DDCC] focus:border-[#8A7158]"
+                      } rounded-xl px-4 py-3 text-sm text-[#252522] placeholder-[#252522]/35 outline-none transition-colors`}
                     />
-                    {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email}</p>}
+                    {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
                   </div>
 
                   {/* Project Location */}
                   <div>
-                    <label className="block text-xs uppercase tracking-wider text-[#D8C3A5]/90 mb-1.5 font-medium">
+                    <label className="block text-xs uppercase tracking-wider text-[#8A7158] mb-1.5 font-bold">
                       Project Location *
                     </label>
                     <input
@@ -216,26 +216,26 @@ export default function Contact() {
                       placeholder="e.g. Kochi, Bangalore, Wayanad"
                       value={formData.projectLocation}
                       onChange={(e) => setFormData({ ...formData, projectLocation: e.target.value })}
-                      className={`w-full bg-[#171816] border ${
-                        errors.projectLocation ? "border-red-500" : "border-[#D8C3A5]/25 focus:border-[#D8C3A5]"
-                      } rounded-xl px-4 py-3 text-sm text-[#F5F1E9] placeholder-[#F5F1E9]/30 outline-none transition-colors`}
+                      className={`w-full bg-[#F8F6F1] border ${
+                        errors.projectLocation ? "border-red-500" : "border-[#E8DDCC] focus:border-[#8A7158]"
+                      } rounded-xl px-4 py-3 text-sm text-[#252522] placeholder-[#252522]/35 outline-none transition-colors`}
                     />
-                    {errors.projectLocation && <p className="text-red-400 text-xs mt-1">{errors.projectLocation}</p>}
+                    {errors.projectLocation && <p className="text-red-500 text-xs mt-1">{errors.projectLocation}</p>}
                   </div>
                 </div>
 
                 {/* Project Type */}
                 <div>
-                  <label className="block text-xs uppercase tracking-wider text-[#D8C3A5]/90 mb-1.5 font-medium">
+                  <label className="block text-xs uppercase tracking-wider text-[#8A7158] mb-1.5 font-bold">
                     Project Type
                   </label>
                   <select
                     value={formData.projectType}
                     onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-                    className="w-full bg-[#171816] border border-[#D8C3A5]/25 focus:border-[#D8C3A5] rounded-xl px-4 py-3 text-sm text-[#F5F1E9] outline-none transition-colors cursor-pointer"
+                    className="w-full bg-[#F8F6F1] border border-[#E8DDCC] focus:border-[#8A7158] rounded-xl px-4 py-3 text-sm text-[#252522] outline-none transition-colors cursor-pointer"
                   >
                     {PROJECT_TYPES.map((type) => (
-                      <option key={type} value={type} className="bg-[#222320]">
+                      <option key={type} value={type} className="bg-white">
                         {type}
                       </option>
                     ))}
@@ -244,7 +244,7 @@ export default function Contact() {
 
                 {/* Estimated Budget */}
                 <div>
-                  <label className="block text-xs uppercase tracking-wider text-[#D8C3A5]/90 mb-2 font-medium">
+                  <label className="block text-xs uppercase tracking-wider text-[#8A7158] mb-2 font-bold">
                     Estimated Budget Range
                   </label>
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
@@ -253,10 +253,10 @@ export default function Contact() {
                         key={opt}
                         type="button"
                         onClick={() => setFormData({ ...formData, estimatedBudget: opt })}
-                        className={`px-3 py-2.5 rounded-lg text-xs font-medium border text-center transition-all ${
+                        className={`px-3 py-2.5 rounded-lg text-xs font-semibold border text-center transition-all ${
                           formData.estimatedBudget === opt
-                            ? "bg-[#D8C3A5] text-[#171816] border-[#D8C3A5] font-semibold"
-                            : "bg-[#171816] border-[#D8C3A5]/20 text-[#F5F1E9]/75 hover:border-[#D8C3A5]/50"
+                            ? "bg-[#252522] text-[#F8F6F1] border-[#252522] shadow-sm"
+                            : "bg-[#F8F6F1] border-[#E8DDCC] text-[#252522]/75 hover:border-[#8A7158]"
                         }`}
                       >
                         {opt}
@@ -267,7 +267,7 @@ export default function Contact() {
 
                 {/* Message */}
                 <div>
-                  <label className="block text-xs uppercase tracking-wider text-[#D8C3A5]/90 mb-1.5 font-medium">
+                  <label className="block text-xs uppercase tracking-wider text-[#8A7158] mb-1.5 font-bold">
                     Message / Spatial Aspirations
                   </label>
                   <textarea
@@ -275,7 +275,7 @@ export default function Contact() {
                     placeholder="Tell us about your land, family lifestyle, or architectural dreams..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full bg-[#171816] border border-[#D8C3A5]/25 focus:border-[#D8C3A5] rounded-xl p-4 text-sm text-[#F5F1E9] placeholder-[#F5F1E9]/30 outline-none transition-colors resize-none"
+                    className="w-full bg-[#F8F6F1] border border-[#E8DDCC] focus:border-[#8A7158] rounded-xl p-4 text-sm text-[#252522] placeholder-[#252522]/35 outline-none transition-colors resize-none"
                   />
                 </div>
 
@@ -283,11 +283,11 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full flex items-center justify-center gap-2 py-4 rounded-full bg-[#D8C3A5] hover:bg-[#F5F1E9] text-[#171816] font-semibold text-xs uppercase tracking-wider transition-all duration-300 shadow-xl disabled:opacity-50"
+                  className="w-full flex items-center justify-center gap-2 py-4 rounded-full bg-[#252522] hover:bg-[#8A7158] text-[#F8F6F1] font-semibold text-xs uppercase tracking-wider transition-all duration-300 shadow-lg disabled:opacity-50"
                 >
                   {loading ? (
                     <>
-                      <div className="w-4 h-4 border-2 border-[#171816] border-t-transparent rounded-full animate-spin" />
+                      <div className="w-4 h-4 border-2 border-[#F8F6F1] border-t-transparent rounded-full animate-spin" />
                       <span>Transmitting Brief...</span>
                     </>
                   ) : (
@@ -301,25 +301,24 @@ export default function Contact() {
             )}
           </div>
 
-          {/* Right Column: Office info & Map (5 cols) */}
+          {/* Right Column: Office info & Map in Soft White (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            {/* Quick Contact Cards */}
-            <div className="p-7 sm:p-8 rounded-3xl bg-[#222320] border border-[#D8C3A5]/20 shadow-xl space-y-5">
-              <h3 className="font-serif text-2xl text-[#F5F1E9]">
+            <div className="p-7 sm:p-8 rounded-3xl bg-white border border-[#E8DDCC] shadow-xl space-y-5">
+              <h3 className="font-serif text-2xl text-[#252522]">
                 Studio & Consultation
               </h3>
 
               <div className="space-y-4 pt-2">
                 <a
                   href={`tel:${COMPANY_INFO.phone}`}
-                  className="flex items-start gap-3.5 group text-sm text-[#F5F1E9]/80 hover:text-[#D8C3A5] transition-colors"
+                  className="flex items-start gap-3.5 group text-sm text-[#252522]/80 hover:text-[#8A7158] transition-colors"
                 >
-                  <div className="w-9 h-9 rounded-full bg-[#171816] border border-[#D8C3A5]/20 flex items-center justify-center shrink-0 group-hover:border-[#D8C3A5]">
-                    <Phone className="w-4 h-4 text-[#D8C3A5]" />
+                  <div className="w-9 h-9 rounded-full bg-[#F8F6F1] border border-[#E8DDCC] flex items-center justify-center shrink-0 group-hover:border-[#8A7158]">
+                    <Phone className="w-4 h-4 text-[#8A7158]" />
                   </div>
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-[#D8C3A5] block">Direct Studio Line</span>
-                    <span className="font-medium text-[#F5F1E9]">{COMPANY_INFO.phone}</span>
+                    <span className="text-[10px] uppercase tracking-wider text-[#8A7158] font-bold block">Direct Studio Line</span>
+                    <span className="font-semibold text-[#252522]">{COMPANY_INFO.phone}</span>
                   </div>
                 </a>
 
@@ -327,53 +326,53 @@ export default function Contact() {
                   href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=${encodeURIComponent(COMPANY_INFO.whatsappMessage)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-3.5 group text-sm text-[#F5F1E9]/80 hover:text-[#25D366] transition-colors"
+                  className="flex items-start gap-3.5 group text-sm text-[#252522]/80 hover:text-[#777B63] transition-colors"
                 >
-                  <div className="w-9 h-9 rounded-full bg-[#171816] border border-[#25D366]/30 flex items-center justify-center shrink-0 group-hover:border-[#25D366]">
-                    <MessageSquare className="w-4 h-4 text-[#25D366]" />
+                  <div className="w-9 h-9 rounded-full bg-[#F8F6F1] border border-[#777B63]/40 flex items-center justify-center shrink-0 group-hover:border-[#777B63]">
+                    <MessageSquare className="w-4 h-4 text-[#777B63]" />
                   </div>
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-[#D8C3A5] block">Instant Messaging</span>
-                    <span className="font-medium text-[#F5F1E9]">WhatsApp +91 98470 12345</span>
+                    <span className="text-[10px] uppercase tracking-wider text-[#8A7158] font-bold block">Instant Messaging</span>
+                    <span className="font-semibold text-[#252522]">WhatsApp +91 98470 12345</span>
                   </div>
                 </a>
 
                 <a
                   href={`mailto:${COMPANY_INFO.email}`}
-                  className="flex items-start gap-3.5 group text-sm text-[#F5F1E9]/80 hover:text-[#D8C3A5] transition-colors"
+                  className="flex items-start gap-3.5 group text-sm text-[#252522]/80 hover:text-[#8A7158] transition-colors"
                 >
-                  <div className="w-9 h-9 rounded-full bg-[#171816] border border-[#D8C3A5]/20 flex items-center justify-center shrink-0 group-hover:border-[#D8C3A5]">
-                    <Mail className="w-4 h-4 text-[#D8C3A5]" />
+                  <div className="w-9 h-9 rounded-full bg-[#F8F6F1] border border-[#E8DDCC] flex items-center justify-center shrink-0 group-hover:border-[#8A7158]">
+                    <Mail className="w-4 h-4 text-[#8A7158]" />
                   </div>
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-[#D8C3A5] block">Inquiry Email</span>
-                    <span className="font-medium text-[#F5F1E9]">{COMPANY_INFO.email}</span>
+                    <span className="text-[10px] uppercase tracking-wider text-[#8A7158] font-bold block">Inquiry Email</span>
+                    <span className="font-semibold text-[#252522]">{COMPANY_INFO.email}</span>
                   </div>
                 </a>
 
-                <div className="flex items-start gap-3.5 text-sm text-[#F5F1E9]/80">
-                  <div className="w-9 h-9 rounded-full bg-[#171816] border border-[#D8C3A5]/20 flex items-center justify-center shrink-0">
-                    <MapPin className="w-4 h-4 text-[#D8C3A5]" />
+                <div className="flex items-start gap-3.5 text-sm text-[#252522]/80">
+                  <div className="w-9 h-9 rounded-full bg-[#F8F6F1] border border-[#E8DDCC] flex items-center justify-center shrink-0">
+                    <MapPin className="w-4 h-4 text-[#8A7158]" />
                   </div>
                   <div>
-                    <span className="text-[10px] uppercase tracking-wider text-[#D8C3A5] block">Principal Studio</span>
-                    <span className="font-medium text-[#F5F1E9]">
+                    <span className="text-[10px] uppercase tracking-wider text-[#8A7158] font-bold block">Principal Studio</span>
+                    <span className="font-semibold text-[#252522]">
                       {COMPANY_INFO.office.address}, {COMPANY_INFO.office.city}, {COMPANY_INFO.office.state}
                     </span>
                   </div>
                 </div>
               </div>
 
-              {/* Regional Studios */}
-              <div className="pt-4 border-t border-[#D8C3A5]/10">
-                <span className="text-[10px] uppercase tracking-wider text-[#D8C3A5] font-semibold block mb-2">
+              {/* Regional Studios in Sand pills */}
+              <div className="pt-4 border-t border-[#E8DDCC]">
+                <span className="text-[10px] uppercase tracking-wider text-[#8A7158] font-bold block mb-2">
                   Regional Studios
                 </span>
                 <div className="flex flex-wrap gap-2 text-xs">
                   {COMPANY_INFO.regionalOffices.map((ro) => (
                     <span
                       key={ro.city}
-                      className="px-3 py-1 rounded-full bg-[#171816] border border-[#D8C3A5]/15 text-[#F5F1E9]/80"
+                      className="px-3 py-1 rounded-full bg-[#F8F6F1] border border-[#E8DDCC] text-[#252522] font-medium"
                     >
                       {ro.city}
                     </span>
@@ -383,21 +382,21 @@ export default function Contact() {
             </div>
 
             {/* Google Maps Visual Card */}
-            <div className="rounded-3xl overflow-hidden border border-[#D8C3A5]/20 bg-[#222320] shadow-xl">
-              <div className="p-4 bg-[#222320] border-b border-[#D8C3A5]/10 flex items-center justify-between text-xs">
-                <span className="text-[#D8C3A5] font-semibold flex items-center gap-1.5">
+            <div className="rounded-3xl overflow-hidden border border-[#E8DDCC] bg-white shadow-xl">
+              <div className="p-4 bg-[#F8F6F1] border-b border-[#E8DDCC] flex items-center justify-between text-xs">
+                <span className="text-[#8A7158] font-bold flex items-center gap-1.5">
                   <MapPin className="w-3.5 h-3.5" />
                   Kochi Principal Studio
                 </span>
-                <span className="text-[#F5F1E9]/50">Mon - Sat: 9:00 AM - 6:30 PM</span>
+                <span className="text-[#252522]/60">Mon - Sat: 9:00 AM - 6:30 PM</span>
               </div>
-              <div className="relative aspect-[16/9] w-full bg-[#171816]">
+              <div className="relative aspect-[16/9] w-full bg-[#F8F6F1]">
                 <iframe
                   title="Abode Builders Office Location"
                   src={COMPANY_INFO.office.googleMapsEmbed}
                   width="100%"
                   height="100%"
-                  style={{ border: 0, filter: "invert(90%) hue-rotate(180deg) contrast(100%)" }}
+                  style={{ border: 0 }}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 />

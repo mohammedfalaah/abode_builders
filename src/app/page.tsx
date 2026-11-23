@@ -21,7 +21,7 @@ import { ModalProvider } from "@/context/ModalContext";
 export default function Home() {
   return (
     <ModalProvider>
-      <div className="min-h-screen bg-[#171816] text-[#F5F1E9] flex flex-col selection:bg-[#D8C3A5] selection:text-[#171816]">
+      <div className="min-h-screen bg-[#F8F6F1] text-[#252522] flex flex-col selection:bg-[#E8DDCC] selection:text-[#252522]">
         {/* Transparent-to-Glass Sticky Navigation */}
         <Navbar />
 
