@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowUpRight, Phone, MessageSquare } from "lucide-react";
@@ -62,18 +63,17 @@ export default function Navbar() {
           {/* Brand Logo */}
           <Link
             href="/"
-            className="group flex items-center gap-3 text-left focus:outline-none"
+            className="group flex items-center focus:outline-none"
+            aria-label="Abode Builders Home"
           >
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-[#222320] border border-[#D8C3A5]/30 flex items-center justify-center text-[#D8C3A5] group-hover:border-[#D8C3A5] transition-colors">
-              <span className="font-serif text-lg font-bold tracking-tighter">A</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-serif text-lg sm:text-xl tracking-[0.2em] font-semibold text-[#F5F1E9] group-hover:text-[#D8C3A5] transition-colors leading-tight">
-                ABODE
-              </span>
-              <span className="text-[9px] uppercase tracking-[0.3em] text-[#D8C3A5]/90 font-light">
-                BUILDERS
-              </span>
+            <div className="relative h-11 sm:h-12 w-36 sm:w-44">
+              <Image
+                src="/logo-white.png"
+                alt="ABODE BUILDERS"
+                fill
+                priority
+                className="object-contain object-left group-hover:opacity-90 transition-opacity"
+              />
             </div>
           </Link>
 
@@ -143,14 +143,15 @@ export default function Navbar() {
               <Link
                 href="/"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center gap-2.5"
+                className="relative h-10 w-36"
+                aria-label="Abode Builders Home"
               >
-                <div className="w-8 h-8 rounded bg-[#222320] border border-[#D8C3A5]/40 flex items-center justify-center text-[#D8C3A5] font-serif font-bold">
-                  A
-                </div>
-                <span className="font-serif tracking-[0.2em] text-[#F5F1E9] font-medium text-base">
-                  ABODE BUILDERS
-                </span>
+                <Image
+                  src="/logo-white.png"
+                  alt="ABODE BUILDERS"
+                  fill
+                  className="object-contain object-left"
+                />
               </Link>
               <button
                 onClick={() => setMobileMenuOpen(false)}

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Send, CheckCircle2, Phone, Mail, MapPin } from "lucide-react";
 import { useModal } from "@/context/ModalContext";
@@ -175,6 +176,14 @@ export default function QuoteModal() {
             ) : (
               <div>
                 <div className="mb-6">
+                  <div className="relative h-10 w-36 mb-3">
+                    <Image
+                      src="/logo-white.png"
+                      alt="ABODE BUILDERS"
+                      fill
+                      className="object-contain object-left"
+                    />
+                  </div>
                   <span className="text-[11px] uppercase tracking-[0.25em] text-[#D8C3A5] font-medium">
                     Private Consultation
                   </span>

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUp, Mail, Phone, MapPin } from "lucide-react";
 import { COMPANY_INFO } from "@/data/company";
 
@@ -63,17 +64,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 pb-16 border-b border-[#D8C3A5]/10">
           {/* Brand info (5 cols) */}
           <div className="lg:col-span-5 space-y-5">
-            <Link href="/" className="inline-flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-[#222320] border border-[#D8C3A5]/30 flex items-center justify-center text-[#D8C3A5] font-serif font-bold text-xl">
-                A
-              </div>
-              <div className="flex flex-col">
-                <span className="font-serif text-2xl tracking-[0.2em] font-semibold text-[#F5F1E9] leading-tight">
-                  ABODE BUILDERS
-                </span>
-                <span className="text-[10px] uppercase tracking-[0.3em] text-[#D8C3A5]">
-                  {COMPANY_INFO.tagline}
-                </span>
+            <Link href="/" className="inline-block focus:outline-none" aria-label="Abode Builders Home">
+              <div className="relative h-14 sm:h-16 w-44 sm:w-52">
+                <Image
+                  src="/logo-white.png"
+                  alt="ABODE BUILDERS"
+                  fill
+                  className="object-contain object-left"
+                />
               </div>
             </Link>
 
