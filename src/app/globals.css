@@ -1,26 +1,71 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-abode-dark: #171816;
+  --color-abode-charcoal: #222320;
+  --color-abode-surface: #2b2c28;
+  --color-abode-ivory: #F5F1E9;
+  --color-abode-beige: #D8C3A5;
+  --color-abode-brown: #9C8061;
+  --color-abode-olive: #777C62;
+  --color-abode-white: #FFFFFF;
+
+  --font-serif: "Cormorant Garamond", Georgia, Cambria, serif;
+  --font-sans: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --abode-dark: #171816;
+  --abode-charcoal: #222320;
+  --abode-surface: #2b2c28;
+  --abode-ivory: #F5F1E9;
+  --abode-beige: #D8C3A5;
+  --abode-brown: #9C8061;
+  --abode-olive: #777C62;
+  --abode-white: #FFFFFF;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #171816;
+    color: #F5F1E9;
+    font-family: "Manrope", system-ui, -apple-system, sans-serif;
+  }
+
+  ::selection {
+    background-color: #D8C3A5;
+    color: #171816;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #171816;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #333530;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9C8061;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Utilities */
+.glass-dark {
+  background: rgba(23, 24, 22, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(216, 195, 165, 0.1);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
