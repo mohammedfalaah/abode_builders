@@ -13,7 +13,7 @@ export default function Hero() {
   const { openStory, openQuote } = useModal();
 
   return (
-    <section className="relative min-h-screen w-full flex flex-col justify-between overflow-hidden bg-[#F8F6F1] text-[#252522]">
+    <section id="home" className="relative min-h-screen w-full flex flex-col justify-between overflow-hidden bg-[#F8F6F1] text-[#252522]">
       {/* Background Architectural Image with Subtle Scale */}
       <div className="absolute inset-0 z-0">
         <motion.div
