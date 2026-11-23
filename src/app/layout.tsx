@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import "./globals.css";
+import "./compiled.css";
 import { COMPANY_INFO } from "@/data/company";
 
 export const metadata: Metadata = {

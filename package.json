@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "tailwindcss -i src/app/globals.css -o src/app/compiled.css --watch & next dev",
+    "build": "tailwindcss -i src/app/globals.css -o src/app/compiled.css --minify && next build",
     "start": "next start",
     "lint": "eslint"
   },
@@ -19,6 +19,8 @@
     "tailwind-merge": "^3.7.1"
   },
   "devDependencies": {
+    "@tailwindcss/cli": "^4.3.5",
+    "@tailwindcss/postcss": "^4.3.5",
     "@tailwindcss/turbopack": "4.3.3",
     "@types/canvas-confetti": "^1.9.0",
     "@types/node": "^20",
