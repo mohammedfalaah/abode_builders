@@ -26,8 +26,8 @@ export default function About() {
           >
             <div className="relative aspect-[4/5] sm:aspect-[3/4] w-full rounded-2xl overflow-hidden shadow-lg border border-[#E8DDCC]">
               <Image
-                src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1600&auto=format&fit=crop"
-                alt="Abode Builders - Natural light and Kerala inspired courtyard architecture"
+                src="/projects/sajid/overview.jpg"
+                alt="Abode Builders - Real Architectural Works in Kerala"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-center hover:scale-105 transition-transform duration-1000"

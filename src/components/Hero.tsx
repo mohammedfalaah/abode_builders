@@ -23,8 +23,8 @@ export default function Hero() {
           className="relative w-full h-full"
         >
           <Image
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2400&auto=format&fit=crop"
-            alt="Abode Builders - Modern Tropical Luxury Residence"
+            src="/projects/shafeeq/hero.jpg"
+            alt="Abode Builders - Mr. Shafeeq 10,000 sq.ft. Modern Colonial Residence in Pattambi"
             fill
             priority
             className="object-cover object-center"
