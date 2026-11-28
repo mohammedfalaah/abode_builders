@@ -12,14 +12,13 @@ export default function Showcase() {
       {/* Full-width Cinematic Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/projects/sajid/hero.jpg"
-          alt="Abode Builders - Mr. Sajid Babu 14,000 sq.ft. Modern Colonial Residence"
+          src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2400&auto=format&fit=crop"
+          alt="Abode Builders - Architectural Showcase Villa"
           fill
-          priority
           className="object-cover object-center scale-105 hover:scale-100 transition-transform duration-1000"
         />
         {/* Layered Luxury Warm Ivory Vignette and Gradients */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#F8F6F1] via-[#F8F6F1]/55 to-[#F8F6F1]/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#F8F6F1] via-[#F8F6F1]/60 to-[#F8F6F1]/30" />
       </div>
 
       {/* Foreground Content */}

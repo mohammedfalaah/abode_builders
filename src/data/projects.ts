@@ -3,94 +3,6 @@ import { Project } from "@/types";
 export const PROJECTS: Project[] = [
   {
     id: "1",
-    slug: "mr-shafeeq-residence",
-    name: "Mr. Shafeeq Residence",
-    tagline: "A 10,000 sq.ft. modern colonial residence in Pattambi, blending timeless Kerala architecture",
-    category: "Villas",
-    categories: ["Villas", "Residential", "Contemporary"],
-    location: "Pattambi, Kerala",
-    city: "Pattambi",
-    year: "2024",
-    area: "10,000 sq.ft",
-    status: "Completed",
-    featured: true,
-    image: "/projects/shafeeq/hero.jpg",
-    heroImage: "/projects/shafeeq/hero.jpg",
-    gallery: [
-      "/projects/shafeeq/hero.jpg",
-      "/projects/shafeeq/overview.jpg",
-      "/projects/shafeeq/detail-1.jpg",
-      "/projects/shafeeq/detail-2.jpg",
-      "/projects/shafeeq/detail-3.jpg",
-    ],
-    overview:
-      "Commissioned for Mr. Shafeeq in Pattambi, this 10,000 sq.ft. modern colonial estate represents a majestic synthesis of neoclassical colonial grandeur and climate-responsive Kerala architecture. Distinguished by its soaring fluted colonnade, monumental double-height portico, and sculpted spiral topiaries, the residence commands a regal street presence while creating serene, sunlit private family sanctuaries within.",
-    designConcept:
-      "The design orchestrates an imposing architectural symmetry softened by warm linear facade illumination and lush tropical palms. Soaring multi-story fluted columns frame a grand double-height arched entryway, featuring a suspended circular brass chandelier and coffered ceiling artistry. Expansive cantilevered terraces with bespoke wrought-iron balustrades offer sweeping views of the grounds.",
-    materials: [
-      { name: "Fluted Neoclassical Colonnade", description: "Bespoke load-bearing architectural columns with integrated vertical warm-white LED illumination." },
-      { name: "Textured Warm Ivory Stucco", description: "Multi-layered exterior facade finished in tactile breathable stucco with classical cornice mouldings." },
-      { name: "Radial Basalt & Granite Paving", description: "Honed and flamed natural granite forecourt engineered for luxury automobile arrival." },
-      { name: "Handcrafted Wrought Iron & Brass", description: "Bespoke balcony railings and monumental double entryway doors with ornamental brass hardware." },
-    ],
-    architecturalDetails: [
-      { title: "Monumental Portico & Chandelier Core", detail: "A soaring 24-foot entrance rotunda crowned with a custom geometric chandelier and carved ceiling tray." },
-      { title: "Dual Master Balconies", detail: "Deep cantilevered twin terrace suites overlooking the sculpted driveway and manicured ornamental gardens." },
-      { title: "Tiered Water Steps & Spiral Topiaries", detail: "Sculptural tiered stone water cascading steps paired with manicured evergreen spiral topiaries." },
-    ],
-    stats: [
-      { label: "Built-up Area", value: "10,000 sq.ft" },
-      { label: "Client", value: "Mr. Shafeeq" },
-      { label: "Location", value: "Pattambi, Kerala" },
-      { label: "Style", value: "Modern Colonial" },
-    ],
-  },
-  {
-    id: "2",
-    slug: "mr-sajid-babu-residence",
-    name: "Mr. Sajid Babu Residence",
-    tagline: "A 14,000 sq.ft. modern colonial residence in Wandoor, blending timeless Kerala architecture",
-    category: "Villas",
-    categories: ["Villas", "Residential", "Contemporary"],
-    location: "Wandoor, Kerala",
-    city: "Wandoor",
-    year: "2024",
-    area: "14,000 sq.ft",
-    status: "Completed",
-    featured: true,
-    image: "/projects/sajid/hero.jpg",
-    heroImage: "/projects/sajid/hero.jpg",
-    gallery: [
-      "/projects/sajid/hero.jpg",
-      "/projects/sajid/overview.jpg",
-      "/projects/sajid/detail-1.jpg",
-      "/projects/sajid/detail-2.jpg",
-      "/projects/sajid/detail-3.jpg",
-    ],
-    overview:
-      "Spanning an extraordinary 14,000 sq.ft. in Wandoor, the palatial manor designed for Mr. Sajid Babu is an architectural tour de force. Seamlessly marrying the stately proportions of classic colonial estates with traditional Kerala pitched clay tile roofs, the residence sits amid sprawling French parterre hedge gardens, a central monolithic stone fountain, and dedicated pavilion outbuildings.",
-    designConcept:
-      "A monumental estate organized around an expansive symmetrical axis. Traditional Kerala clay-tiled hipped roofs shield the structure against tropical monsoon downpours while celebrating vernacular heritage. The grand ground plane flows effortlessly through manicured parterre boxwood hedges, sweeping circular motor courts, and an open multi-bay porte-cochère.",
-    materials: [
-      { name: "Traditional Terracotta Mangalore Roof Tiles", description: "High-fired interlocking clay tiles providing acoustic dampening during monsoons and thermal buffering." },
-      { name: "Classical Fluted Pilasters & Roman Arches", description: "Monumental load-bearing structural columns with fluted details and hand-finished archways." },
-      { name: "Honed Sandstone & White Marble Paving", description: "Waterjet-cut natural stone forecourt surfaces with perimeter drainage and integrated lighting." },
-      { name: "Hardwood Millwork & Teak Entryways", description: "Bespoke solid seasoned teak paneling, French doors, and intricately carved architraves." },
-    ],
-    architecturalDetails: [
-      { title: "Grand Parterre Forecourt & Fountain", detail: "Symmetrical French-inspired boxwood hedge gardens surrounding a monolithic stone reflection fountain." },
-      { title: "Multi-Bay Porte-Cochère & Garages", detail: "Spacious vehicle reception portico flanked by matching pavilion-roofed ancillary estates." },
-      { title: "Climatic Thermal Mass Verandahs", detail: "Continuous perimeter shaded verandahs providing natural cooling and year-round indoor-outdoor connection." },
-    ],
-    stats: [
-      { label: "Built-up Area", value: "14,000 sq.ft" },
-      { label: "Client", value: "Mr. Sajid Babu" },
-      { label: "Location", value: "Wandoor, Kerala" },
-      { label: "Style", value: "Modern Colonial" },
-    ],
-  },
-  {
-    id: "3",
     slug: "the-earth-house",
     name: "The Earth House",
     tagline: "Rammed earth, raw concrete, and open courtyard sanctuary",
@@ -133,7 +45,7 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    id: "4",
+    id: "2",
     slug: "villa-serenity",
     name: "Villa Serenity",
     tagline: "Hillside luxury villa cradled by mist and stone terraces",
@@ -176,7 +88,7 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    id: "5",
+    id: "3",
     slug: "the-courtyard-residence",
     name: "The Courtyard Residence",
     tagline: "Reimagined Nalukettu architecture for modern family life",
@@ -187,7 +99,7 @@ export const PROJECTS: Project[] = [
     year: "2023",
     area: "5,400 sq.ft",
     status: "Completed",
-    featured: false,
+    featured: true,
     image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=1600&auto=format&fit=crop",
     heroImage: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2000&auto=format&fit=crop",
     gallery: [
@@ -219,7 +131,7 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    id: "6",
+    id: "4",
     slug: "urban-haven",
     name: "Urban Haven",
     tagline: "Minimalist concrete sanctuary in the heart of the city",
@@ -230,7 +142,7 @@ export const PROJECTS: Project[] = [
     year: "2024",
     area: "4,200 sq.ft",
     status: "Completed",
-    featured: false,
+    featured: true,
     image: "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?q=80&w=1600&auto=format&fit=crop",
     heroImage: "https://images.unsplash.com/photo-1600585154363-67eb9e2e2099?q=80&w=2000&auto=format&fit=crop",
     gallery: [
@@ -262,7 +174,7 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    id: "7",
+    id: "5",
     slug: "the-timber-pavilion",
     name: "The Timber Pavilion",
     tagline: "Tropical modernist villa wrapped in artisanal teak screens",
@@ -302,7 +214,7 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    id: "8",
+    id: "6",
     slug: "minimalist-zen-loft",
     name: "Minimalist Zen Loft",
     tagline: "Tactile interior architecture rooted in natural stone and microcement",
